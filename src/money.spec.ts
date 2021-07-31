@@ -12,5 +12,11 @@ describe('Money', () => {
         expect(five.times(3).equals(Money.euro(15))).toBeTruthy()
         })
 
-    
+    it('should correctly handle money equality', () =>{
+        expect(Money.dollar(5).equals(Money.dollar(5))).toBeTruthy()
+        expect(Money.dollar(5).equals(Money.dollar(6))).toBeFalsy()
+        expect(Money.euro(5).equals(Money.euro(5))).toBeTruthy()
+        expect(Money.euro(5).equals(Money.euro(6))).toBeFalsy()
+        expect(Money.dollar(5).equals(Money.euro(5))).toBeFalsy()
+    })  
 })
