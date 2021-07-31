@@ -19,4 +19,6 @@ describe('Money', () => {
         expect(Money.euro(5).equals(Money.euro(6))).toBeFalsy()
         expect(Money.dollar(5).equals(Money.euro(5))).toBeFalsy()
     })  
+
+
 })
