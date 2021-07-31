@@ -13,9 +13,10 @@ describe('Money', () => {
         expect(five.times(3).equals(new Euro(15))).toBeTruthy()
         })
 
-    it('should return true when dollars of the same value are compared', () =>{
+    it('should return true when dollars and euros of the same value are compared', () =>{
         expect(new Dollar(5).equals(new Dollar(5))).toBeTruthy()
         expect(new Dollar(5).equals(new Dollar(6))).toBeFalsy()
+     
         
     })
 })
