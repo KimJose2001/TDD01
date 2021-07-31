@@ -1,17 +1,17 @@
 export class Money {
-    public  amount: number
-    public  _currency: string
+    public readonly amount: number
+    public readonly _currency: string
 
     constructor (amount: number, currency: string){
         this.amount = amount
         this._currency = currency
     }
 
-    static dollar(amount: number): Dollar{
+    static dollar(amount: number): Money{
         return new Money(amount, 'USD')
     }
 
-    static euro(amount: number): Dollar{
+    static euro(amount: number): Money{
         return new Money(amount, 'EUR')
     }
 
@@ -22,7 +22,7 @@ export class Money {
         return this.amount === other.amount 
     }
 
-    times(multiplier: number): Dollar{
+    times(multiplier: number): Money{
         return  new Money(this.amount * multiplier, this._currency)
     }
 
