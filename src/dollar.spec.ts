@@ -1,4 +1,4 @@
-import { Euro } from '../euro'
+import { Euro } from './euro'
 import {Dollar} from './dollar'
 describe('Dollar', () => {
     it('should return 10 when five dollars are multiplied by two and 15 when multiplied by three', () =>{
