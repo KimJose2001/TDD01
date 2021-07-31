@@ -20,5 +20,8 @@ describe('Money', () => {
         expect(Money.dollar(5).equals(Money.euro(5))).toBeFalsy()
     })  
 
-
+    it('should correctly handle currencies', () =>{
+        expect(Money.dollar(1).currency()).toEqual('USD')
+        expect(Money.euro(1).currency()).toEqual('EUR')
+    })
 })
