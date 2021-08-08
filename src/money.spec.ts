@@ -36,5 +36,16 @@ describe('Money', () => {
         expect(sum.addend).toEqual(five)
     })
 
+    it('should reduce a sum', () => {
+        const sum: Expression = new Sum(Money.dollar(3), Money.dollar(4))
+        const bank = new Bank()
+        const result = bank.reduce(sum, 'USD')
+        expect(result).toEqual(Money.dollar(7))
+    })
 
+    it('should reduce from a money', () => {
+        const bank = new Bank()
+        const result: Money = bank.reduce(Money.dollar(1), 'USD')
+        expect(result).toEqual(Money.dollar(1))
+    })
 })
